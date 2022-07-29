@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(24, 24, 24);
+    height: 100vh;
+}
+
+h1{
+    background: -webkit-linear-gradient(190deg, #062df2 0%, #eb43e0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    margin-top: 50px;
+    text-transform: capitalize;
+}
+
+/*PORTFOLIO*/
+.galerie{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1200px;
+    margin:  70px auto 0;
+}
+
+.item{
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    box-shadow: rgba(242, 108, 184, 0.423) 5px -5px 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    box-shadow: rgba(254, 254, 254, 0.423) 5px -5px 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.item img{
+    height:auto;
+    width: 100%;
+}
+
+/*ANIMATIONS IMAGE*/
+.grayscale div img{
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.grayscale div:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.rotate div img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+  .rotate div:hover img {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+footer{
+    background: linear-gradient(rgb(24, 24, 24) 0 , rgb(58, 58, 58) 50%, rgb(132, 131, 131) 100%);
+    text-align: center;
+    color: white;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    padding-top: 100px;
+    height: 200px;
+}
+@media screen and (max-width: 850px) {
+    h1{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .item{
+        width: 350px;
+        height: 250px;
+        margin: 7px;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 1px solid #ccc;
+    }
+}
